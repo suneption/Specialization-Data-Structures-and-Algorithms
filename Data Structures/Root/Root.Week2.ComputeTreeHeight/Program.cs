@@ -22,6 +22,11 @@ namespace Root.Week2.ComputeTreeHeight
         {
             var root = CreateTree(n, vs);
 
+            if (root == null)
+            {
+                return 0;
+            }
+
             var height = 1;
             var queue = new Queue<Node>();
             queue.Enqueue(root);
@@ -36,9 +41,10 @@ namespace Root.Week2.ComputeTreeHeight
                     curr.Children.ForEach(x => nextLevelQueue.Enqueue(x));
                 }
 
-                if (!queue.Any())
+                if (!queue.Any() && nextLevelQueue.Any())
                 {
                     queue = nextLevelQueue;
+                    nextLevelQueue = new Queue<Node>();
                     height++;
                 }
             }
