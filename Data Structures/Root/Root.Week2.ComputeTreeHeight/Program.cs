@@ -23,17 +23,23 @@ namespace Root.Week2.ComputeTreeHeight
             var root = CreateTree(n, vs);
 
             var height = 1;
-            var stack = new Stack<Node>();
-            stack.Push(root);
+            var queue = new Queue<Node>();
+            queue.Enqueue(root);
+            var nextLevelQueue = new Queue<Node>();
             
-            while (stack.Any())
+            while (queue.Any())
             {
-                var curr = stack.Pop();
+                var curr = queue.Dequeue();
 
                 if (curr.Children.Any())
                 {
+                    curr.Children.ForEach(x => nextLevelQueue.Enqueue(x));
+                }
+
+                if (!queue.Any())
+                {
+                    queue = nextLevelQueue;
                     height++;
-                    curr.Children.ForEach(x => stack.Push(x));
                 }
             }
 
