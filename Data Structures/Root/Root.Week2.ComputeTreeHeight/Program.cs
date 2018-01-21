@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Root.Week2.ComputeTreeHeight
+namespace Root.Week1.ComputeTreeHeight
 {
     class Program
     {
