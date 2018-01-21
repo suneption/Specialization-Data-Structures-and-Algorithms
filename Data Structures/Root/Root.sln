@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root.Week1", "Root.Week1", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.CheckBrackets", "Root.Week1.CheckBrackets\Root.Week1.CheckBrackets.csproj", "{5A263402-3B38-484C-84E9-2723077943ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.ComputeTreeHeight", "Root.Week2.ComputeTreeHeight\Root.Week1.ComputeTreeHeight.csproj", "{0EF9406A-3430-478B-A0A3-1BD0DB117375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.ComputeTreeHeight", "Root.Week1.ComputeTreeHeight\Root.Week1.ComputeTreeHeight.csproj", "{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.PacketProcessing", "Root.Week2.PacketProcessing\Root.Week1.PacketProcessing.csproj", "{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.PacketProcessing", "Root.Week1.PacketProcessing\Root.Week1.PacketProcessing.csproj", "{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,10 @@ Global
 		{5A263402-3B38-484C-84E9-2723077943ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A263402-3B38-484C-84E9-2723077943ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A263402-3B38-484C-84E9-2723077943ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EF9406A-3430-478B-A0A3-1BD0DB117375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EF9406A-3430-478B-A0A3-1BD0DB117375}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EF9406A-3430-478B-A0A3-1BD0DB117375}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EF9406A-3430-478B-A0A3-1BD0DB117375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,7 +35,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5A263402-3B38-484C-84E9-2723077943ED} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
-		{0EF9406A-3430-478B-A0A3-1BD0DB117375} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
+		{0A11DC1E-8C41-4A38-B81F-C54A891C01DA} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

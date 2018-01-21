@@ -77,9 +77,10 @@ namespace Root.Week1.PacketProcessing
             {
                 var finishTime = 0;
                 var startTime = 0;
+
                 if (last.HasValue)
                 {
-                    startTime = last.Value.F;
+                    startTime = packet.A > last.Value.F ? packet.A : last.Value.F;
                     finishTime = startTime + packet.P;
                 }
                 else

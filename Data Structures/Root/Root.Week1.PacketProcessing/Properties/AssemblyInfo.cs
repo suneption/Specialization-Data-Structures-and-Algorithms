@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Root.Week2.ComputeTreeHeight")]
+[assembly: AssemblyTitle("Root.Week1.PacketProcessing")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Root.Week2.ComputeTreeHeight")]
+[assembly: AssemblyProduct("Root.Week1.PacketProcessing")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0ef9406a-3430-478b-a0a3-1bd0db117375")]
+[assembly: Guid("ba40c1eb-f2ae-4c22-b001-4e1c628b6d07")]
 
 // Version information for an assembly consists of the following four values:
 //

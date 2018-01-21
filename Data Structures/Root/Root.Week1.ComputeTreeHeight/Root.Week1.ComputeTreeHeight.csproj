@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2602DE62-5296-4DA3-A45F-2DBB440AE86A}</ProjectGuid>
+    <ProjectGuid>{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Root</RootNamespace>
-    <AssemblyName>Root</AssemblyName>
+    <RootNamespace>Root.Week1.ComputeTreeHeight</RootNamespace>
+    <AssemblyName>Root.Week2.ComputeTreeHeight</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
