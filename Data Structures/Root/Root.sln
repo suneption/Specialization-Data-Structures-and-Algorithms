@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root.Week1", "Root.Week1", "{196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}"
 EndProject
@@ -10,6 +10,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.ComputeTreeHeight", "Root.Week1.ComputeTreeHeight\Root.Week1.ComputeTreeHeight.csproj", "{0A11DC1E-8C41-4A38-B81F-C54A891C01DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week1.PacketProcessing", "Root.Week1.PacketProcessing\Root.Week1.PacketProcessing.csproj", "{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root.Week2.PriorityQueue", "Root.Week2.PriorityQueue", "{E04A553B-36F2-43EC-B557-B9A066098AB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week2.PriorityQueue.ConvertArrayIntoHeap", "Root.Week2.PriorityQueue.ConvertArrayIntoHeap\Root.Week2.PriorityQueue.ConvertArrayIntoHeap.csproj", "{128F3423-95C8-4CB6-8856-090B3FD9BCFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week2.PriorityQueue.ParallelProcessing", "Root.Week2.PriorityQueue.ParallelProcessing\Root.Week2.PriorityQueue.ParallelProcessing.csproj", "{229B263C-11D5-4B58-B67F-6BE54AA99FA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root.Week3.HashTables", "Root.Week3.HashTables", "{FABB2107-CE4C-4F40-8CD8-1A48D56ACC19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root.Week3.HashTables.PhoneBook", "Root.Week3.HashTables.PhoneBook\Root.Week3.HashTables.PhoneBook.csproj", "{1327EA9C-CA4C-4FB8-981C-3F012B20A1B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +39,18 @@ Global
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128F3423-95C8-4CB6-8856-090B3FD9BCFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128F3423-95C8-4CB6-8856-090B3FD9BCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128F3423-95C8-4CB6-8856-090B3FD9BCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128F3423-95C8-4CB6-8856-090B3FD9BCFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229B263C-11D5-4B58-B67F-6BE54AA99FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229B263C-11D5-4B58-B67F-6BE54AA99FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229B263C-11D5-4B58-B67F-6BE54AA99FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229B263C-11D5-4B58-B67F-6BE54AA99FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1327EA9C-CA4C-4FB8-981C-3F012B20A1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1327EA9C-CA4C-4FB8-981C-3F012B20A1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1327EA9C-CA4C-4FB8-981C-3F012B20A1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1327EA9C-CA4C-4FB8-981C-3F012B20A1B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +59,9 @@ Global
 		{5A263402-3B38-484C-84E9-2723077943ED} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
 		{0A11DC1E-8C41-4A38-B81F-C54A891C01DA} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
 		{BA40C1EB-F2AE-4C22-B001-4E1C628B6D07} = {196A10DC-194E-4E0E-B57D-1B8E4E2A6C07}
+		{128F3423-95C8-4CB6-8856-090B3FD9BCFC} = {E04A553B-36F2-43EC-B557-B9A066098AB6}
+		{229B263C-11D5-4B58-B67F-6BE54AA99FA0} = {E04A553B-36F2-43EC-B557-B9A066098AB6}
+		{1327EA9C-CA4C-4FB8-981C-3F012B20A1B6} = {FABB2107-CE4C-4F40-8CD8-1A48D56ACC19}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {538F0D31-0567-4F08-8655-EB150C7F5443}
