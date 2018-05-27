@@ -106,5 +106,97 @@ namespace Graphs.W2.Decomposition2.Acyclicity.Properties {
                 return ResourceManager.GetString("_2a", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100 100
+        ///27 96
+        ///23 51
+        ///42 10
+        ///40 22
+        ///30 41
+        ///80 40
+        ///13 70
+        ///21 94
+        ///88 35
+        ///38 86
+        ///53 83
+        ///71 84
+        ///64 26
+        ///4 46
+        ///76 43
+        ///24 76
+        ///26 83
+        ///18 75
+        ///42 98
+        ///36 39
+        ///47 63
+        ///33 96
+        ///89 54
+        ///47 80
+        ///95 8
+        ///34 41
+        ///91 45
+        ///78 1
+        ///12 74
+        ///2 37
+        ///98 81
+        ///30 32
+        ///93 30
+        ///45 71
+        ///38 44
+        ///85 18
+        ///89 10
+        ///71 35
+        ///73 52
+        ///28 42
+        ///98 20
+        ///22 69
+        ///56 79
+        ///78 63
+        ///53 58
+        ///77 13
+        ///6 11
+        ///56 36
+        ///4 11
+        ///92 63
+        ///32 78
+        ///71 24
+        ///16 79
+        ///66 89
+        ///72 6
+        ///20 15
+        ///2 91
+        ///100 75
+        ///93 7
+        ///42 100
+        ///18 88
+        ///49 75
+        ///33 78
+        ///81 1
+        ///42 95
+        ///73 64
+        ///50 66
+        ///33 68
+        ///14 38
+        ///80 89
+        ///8 16
+        ///87 18
+        ///20 80
+        ///8 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string _3 {
+            get {
+                return ResourceManager.GetString("_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string _3a {
+            get {
+                return ResourceManager.GetString("_3a", resourceCulture);
+            }
+        }
     }
 }

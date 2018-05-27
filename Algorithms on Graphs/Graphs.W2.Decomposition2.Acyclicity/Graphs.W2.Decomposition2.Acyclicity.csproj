@@ -66,6 +66,8 @@
     <Content Include="_1a.txt" />
     <Content Include="_2.txt" />
     <Content Include="_2a.txt" />
+    <Content Include="_3.txt" />
+    <Content Include="_3a.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

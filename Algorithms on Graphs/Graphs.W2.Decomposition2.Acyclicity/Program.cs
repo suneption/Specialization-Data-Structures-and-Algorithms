@@ -29,87 +29,60 @@ namespace Graphs.W2.Decomposition2.Acyclicity
 
         private static bool HasCycle(Digraph digraph)
         {
-            var visited = new HashSet<int>();
             var numbers = new List<int[]>();
-            Enumerable.Range(1, digraph.VsCount).ToList().ForEach(x => numbers.Add(new int [2]));
+            Enumerable.Range(0, digraph.VsCount + 1).ToList().ForEach(x => numbers.Add(new int [2]));
             var last = 1;
 
-            foreach (var vertex in digraph.Vertecis())
+            var vertecis = digraph.Vertecis()
+                .Select(x => new ExtendedNode { Inner = x })
+                .ToDictionary(x => x.Inner.Id);
+
+            foreach (var vertex in vertecis.Values)
             {
-                if (visited.Contains(vertex.Id))
+                if (vertex.IsVisited)
                 {
                     continue;
                 }
 
-                var nextVertices = new Stack<Node>();
+                var nextVertices = new Stack<ExtendedNode>();
                 nextVertices.Push(vertex);
-                Node current = null;
 
                 while (nextVertices.Any())
                 {
-                    if (current != null)
-                    {
-                        var next = nextVertices.Peek();
-                        if (current.Parent == next.Parent)
-                        {
-                            current = nextVertices.Pop();
-                        }
-                        else
-                        {
-                            if (current.Parent == null)
-                            {
-                                break;
-                            }
+                    var current = nextVertices.Peek();
 
-                            current = current.Parent;
-                        }
+                    if (!current.IsVisited)
+                    {
+                        current.Pre = last;
                     }
                     else
                     {
-                        current = nextVertices.Pop();
+                        current.Post = last;
                     }
-
-                    var prePost = numbers[current.Id];
-                    var pre = prePost[0];
-                    var post = prePost[1];
-
-                    if (pre == 0)
-                    {
-                        pre = last;
-                    }
-                    else
-                    {
-                        post = last;
-                    }
-                    numbers[current.Id] = new int[] { pre, post };
                     last++;
 
-                    visited.Add(current.Id);
-
-                    var adjs = digraph.Adj(current.Id);
-                    var visitedAdjs = adjs.Where(x => visited.Contains(x.Id)).ToList();
-                    if (visitedAdjs.Any())
+                    var adjs = digraph.Adj(current.Inner.Id).Select(x => vertecis[x.Id]).ToList();
+                    var visitedAdjs = adjs.Where(x => x.IsVisited).ToList();
+                    if (visitedAdjs.Any(x => x.IsPartiallyVisited))
                     {
-                        foreach (var visitedNode in visitedAdjs)
-                        {
-                            prePost = numbers[visitedNode.Id];
-                            pre = prePost[0];
-                            post = prePost[1];
-                            if (pre > 0 && post == 0)
-                            {
-                                return true;
-                            }
-                        }
+                        return true;
                     }
 
-                    var notVisitedAdjs = digraph.Adj(current.Id);
-                    foreach (var notVisitedAdj in notVisitedAdjs)
+                    var notVisitedAdjs = adjs.Where(x => !x.IsVisited).ToList();
+
+                    if (notVisitedAdjs.Any())
                     {
-                        nextVertices.Push(notVisitedAdj);
+                        notVisitedAdjs.ForEach(x => nextVertices.Push(x));
+                    }
+                    else
+                    {
+                        current.Post = last;
+                        last++;
+                        nextVertices.Pop();
                     }
                 }
             }
-
+            
             return false;
         }
     }
@@ -125,7 +98,7 @@ namespace Graphs.W2.Decomposition2.Acyclicity
 
             _adjacencyLists = new List<Node>(vsCount);
             Enumerable.Range(0, vsCount + 1).ToList()
-                .ForEach(x => _adjacencyLists.Add(null));
+                .ForEach(x => _adjacencyLists.Add(new Node(x)));
         }
 
         public Digraph(int vsCount, int esCount, List<List<int>> scheme)
@@ -140,7 +113,7 @@ namespace Graphs.W2.Decomposition2.Acyclicity
             }
         }
         
-        public int VsCount { get; }
+        public int VsCount { get; private set; }
         public int EsCount { get; private set; }
 
         public IEnumerable<Node> Vertecis()
@@ -156,25 +129,7 @@ namespace Graphs.W2.Decomposition2.Acyclicity
         private void AddEdge(int head, int tail)
         {
             var headNode = _adjacencyLists[head];
-            if (headNode == null)
-            {
-                headNode = new Node(head);
-                _adjacencyLists[head] = headNode;
-            }
-
             var tailNode = _adjacencyLists[tail];
-            if (tailNode == null)
-            {
-                tailNode = new Node(tail, headNode);
-                _adjacencyLists[tail] = tailNode;
-            }
-            else
-            {
-                if (tailNode.Parent == null)
-                {
-                    tailNode.SetParent(headNode);
-                }
-            }
 
             headNode.Add(tailNode);
         }
@@ -184,22 +139,16 @@ namespace Graphs.W2.Decomposition2.Acyclicity
     {
         private readonly List<Node> _adjacencies;
 
-        public int Id { get; }
-        public Node Parent { get; private set; }
+        public int Id { get; private set; }
         public IReadOnlyList<Node> Adjacencies { get { return _adjacencies; } }
 
         public Node(int id)
-            : this(id, null, new List<Node>())
-        { }
-
-        public Node(int id, Node parent)
-            : this(id, parent, new List<Node>())
+            : this(id, new List<Node>())
         { }
         
-        public Node(int id, Node parent, List<Node> adjacencies)
+        public Node(int id, List<Node> adjacencies)
         {
             Id = id;
-            Parent = parent;
             _adjacencies = adjacencies;
         }
 
@@ -207,15 +156,15 @@ namespace Graphs.W2.Decomposition2.Acyclicity
         {
             _adjacencies.Add(adjacency);
         }
+    }
 
-        public void SetParent(Node parent)
-        {
-            if (Parent != null)
-            {
-                throw new InvalidOperationException();
-            }
+    class ExtendedNode
+    {
+        public Node Inner { get; set; }
+        public int Pre { get; set; }
+        public int Post { get; set; }
 
-            Parent = parent;
-        }
+        public bool IsVisited { get { return Pre > 0; } }
+        public bool IsPartiallyVisited { get { return Pre > 0 && Post == 0; } }
     }
 }

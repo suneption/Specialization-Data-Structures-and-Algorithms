@@ -17,8 +17,9 @@ namespace Graphs.W2.Decomposition2.Acyclicity
         {
             var cases = new List<Tuple<string, string>>
             {
-                //new Tuple<string, string>(Resources._1, Resources._1A),
-                new Tuple<string, string>(Resources._2, Resources._2a)
+                new Tuple<string, string>(Resources._1, Resources._1A),
+                new Tuple<string, string>(Resources._2, Resources._2a),
+                new Tuple<string, string>(Resources._3, Resources._3a)
             };
 
             foreach (var c in cases)
