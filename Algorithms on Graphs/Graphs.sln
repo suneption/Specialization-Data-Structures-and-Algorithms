@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "W2", "W2", "{A693EC52-023A-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.W2.Decomposition2.Acyclicity", "Graphs.W2.Decomposition2.Acyclicity\Graphs.W2.Decomposition2.Acyclicity.csproj", "{DB6438C8-F5B6-4BDF-8259-E882D52BDCA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.W2.Decomposition2.TopSort", "Graphs.W2.Decomposition2.TopSort\Graphs.W2.Decomposition2.TopSort.csproj", "{4F32EA33-E029-4B02-BB8A-6B0A1CCE2646}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{DB6438C8-F5B6-4BDF-8259-E882D52BDCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB6438C8-F5B6-4BDF-8259-E882D52BDCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB6438C8-F5B6-4BDF-8259-E882D52BDCA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F32EA33-E029-4B02-BB8A-6B0A1CCE2646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F32EA33-E029-4B02-BB8A-6B0A1CCE2646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F32EA33-E029-4B02-BB8A-6B0A1CCE2646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F32EA33-E029-4B02-BB8A-6B0A1CCE2646}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{88B25DF3-3C11-4012-8111-AF92714E9554} = {192F66FA-CC7B-40C5-94D2-A9F61DE42071}
 		{DB6438C8-F5B6-4BDF-8259-E882D52BDCA6} = {A693EC52-023A-49C6-8EFB-C3BE025B4E1F}
+		{4F32EA33-E029-4B02-BB8A-6B0A1CCE2646} = {A693EC52-023A-49C6-8EFB-C3BE025B4E1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {167F9849-31EB-4AD2-9AC7-ED0F5BE899CC}
